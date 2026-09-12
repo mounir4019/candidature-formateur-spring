@@ -63,7 +63,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.oauth2.jwt.Jwt;
 @RestController
-@RequestMapping("/api/candidatureFormateurs/candidaturePlanifiee")
+@RequestMapping("/apicandidatureFormateurs/candidaturePlanifiee")
 @AllArgsConstructor  
 public class CandidaturePlanifieeController {
     private static final List<String> IMAGE_MIME_TYPES = Arrays.asList("image/jpeg","image/jpg", "image/png", "image/gif"); 

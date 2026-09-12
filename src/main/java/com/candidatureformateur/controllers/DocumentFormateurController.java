@@ -38,7 +38,7 @@ import com.candidatureformateur.servicesDivers.ServiceDivers;
 import lombok.AllArgsConstructor;
 
 @RestController
-@RequestMapping("/api/candidatureFormateurs/documentFormateurs")
+@RequestMapping("/apicandidatureFormateurs/documentFormateurs")
 @AllArgsConstructor 
 public class DocumentFormateurController {
   private static final List<String> IMAGE_MIME_TYPES = Arrays.asList("image/jpeg","image/jpg", "image/png", "image/gif");

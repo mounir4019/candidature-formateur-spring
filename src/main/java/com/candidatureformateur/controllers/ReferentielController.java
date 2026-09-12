@@ -21,7 +21,7 @@ import com.candidatureformateur.repository.TypeDocumentRepository;
 import lombok.AllArgsConstructor;
 
 @RestController
-@RequestMapping("/api/candidatureFormateurs/referentiel")
+@RequestMapping("/apicandidatureFormateurs/referentiel")
 @AllArgsConstructor 
 
 public class ReferentielController  {

@@ -47,7 +47,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/api/candidatureFormateurs/formateurs")
+@RequestMapping("/apicandidatureFormateurs/formateurs")
 @AllArgsConstructor 
 public class FormateurController {
     private final FormateurRepository formateurRepository; 

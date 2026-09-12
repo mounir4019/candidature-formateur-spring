@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import lombok.AllArgsConstructor;
 
 @RestController
-@RequestMapping("/api/candidatureFormateurs/candidatureSontanee")
+@RequestMapping("/apicandidatureFormateurs/candidatureSontanee")
 @AllArgsConstructor 
 
 public class CandidatureSpontaneeController {
