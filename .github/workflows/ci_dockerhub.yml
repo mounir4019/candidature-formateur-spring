@@ -1,0 +1,38 @@
+name: Build Docker Image
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout du code
+        uses: actions/checkout@v4
+
+      - name: Connexion au registre DockerHub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN_SPRING_INSCRIPTION }}
+
+      - name: Définir le tag de l'image
+        run: echo "IMAGE_TAG=build-$(date +'%Y%m%d%H%M%S')" >> $GITHUB_ENV
+
+      - name: Build de l'image Docker
+        run: |
+          docker build \
+            -t ${{ secrets.DOCKERHUB_USERNAME }}/my-spring-inscription-formateur:${{ env.IMAGE_TAG }} \
+            -t ${{ secrets.DOCKERHUB_USERNAME }}/my-spring-inscription-formateur:latest \
+            .
+
+      - name: Push de l'image latest
+        run: |
+          docker push \
+            ${{ secrets.DOCKERHUB_USERNAME }}/my-spring-inscription-formateur:latest

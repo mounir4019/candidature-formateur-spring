@@ -1,0 +1,46 @@
+ 
+git remote add gitlab https://gitlab.com/mounir4019/concoursspring.git
+  git remote -v
+gitlab  https://gitlab.com/mounir4019/concoursspring.git (fetch)
+gitlab  https://gitlab.com/mounir4019/concoursspring.git (push)
+origin  https://github.com/mounir4019/concoursSpring.git (fetch)
+origin  https://github.com/mounir4019/concoursSpring.git (push)
+ git status
+ git push --force gitlab main
+ git remote show origin
+git remote show gitlab
+git push github main  === git push origin main
+git push gitlab main
+Résumé :
+Pousser vers GitHub : git push origin main
+Pousser vers GitLab : git push gitlab main
+Récupérer depuis GitHub : git pull origin main
+Récupérer depuis GitLab : git pull gitlab main
+Changer de remote (si nécessaire) : git remote rename gitlab origin
+
+Créer un remote global (optionnel)
+Si tu veux pousser vers les deux en une seule commande, utilise : 
+git remote set-url --add --push origin <URL_GITHUB>
+git remote set-url --add --push origin <URL_GITLAB>
+
+
+Pour supprimer la branche nouvelle-branche sur GitHub ou GitLab, utilise la commande suivante : 
+git push origin --delete nouvelle-branche
+-----------------
+les branche en local:
+PS D:\concoursProject\concoursSpring> git branch
+  main
+  nouvelle-branche
+* nouvelle-branche2
+PS D:\concoursProject\concoursSpring> git branch -r
+  gitlab/main
+  gitlab/nouvelle-branche
+  origin/main
+
+ Forcer la mise à jour des branches distantes locales
+Parfois, Git garde une référence obsolète des branches distantes. Fais un nettoyage avec : 
+PS D:\concoursProject\concoursSpring> git remote prune gitlab
+Ensuite, vérifie si gitlab/nouvelle-branche est toujours listée : 
+PS D:\concoursProject\concoursSpring> git branch -r
+  gitlab/main
+  origin/main
