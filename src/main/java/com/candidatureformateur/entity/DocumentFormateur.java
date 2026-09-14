@@ -58,7 +58,7 @@ public class DocumentFormateur {
     @JoinColumn(name = "type_document_id", nullable = false)
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     private TypeDocument typeDocument;
-            @JsonFormat(
+    @JsonFormat(
         shape = JsonFormat.Shape.STRING,
         pattern = "yyyy-MM-dd",
         timezone = "Africa/Tunis"

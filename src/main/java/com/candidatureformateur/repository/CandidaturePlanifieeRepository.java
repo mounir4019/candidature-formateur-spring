@@ -26,6 +26,6 @@ public interface CandidaturePlanifieeRepository  extends JpaRepository<Candidatu
             LocalDate date,
             Pageable pageable
     );
-    
+    boolean existsByThemeFormationId(Long idTheme);
 
 }

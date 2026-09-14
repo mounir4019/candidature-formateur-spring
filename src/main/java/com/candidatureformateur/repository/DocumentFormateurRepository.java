@@ -12,7 +12,7 @@ public interface DocumentFormateurRepository extends JpaRepository<DocumentForma
 
     long countByFormateurIdAndTypeDocumentId(Long idFormateur, Long idTypeDocument);
     @Query ("SELECT d.fichier FROM DocumentFormateur d WHERE d.formateur.id = :idFormateur")
-    List<byte[]> findFichiersByFormateurId(
-        @Param("idFormateur") Long idFormateur
-);
+    List<byte[]> findFichiersByFormateurId(  @Param("idFormateur") Long idFormateur);
+    boolean existsByTypeDocumentId(Long idTypeDocument);
+    
 }

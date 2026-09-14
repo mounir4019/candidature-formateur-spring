@@ -12,4 +12,5 @@ public interface CandidatureSpontaneeRepository extends JpaRepository<Candidatur
       boolean existsByFormateurIdAndThemeFormationId(  Long idFormateur, Long idTheme);
 
       List<CandidatureSpontanee> findByThemeFormationId(Long idTheme);
+      boolean existsByThemeFormationId(Long idTheme);
 }
